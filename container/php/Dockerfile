@@ -10,6 +10,12 @@ RUN apt-get update \
 
 RUN docker-php-ext-install pdo_mysql
 
+
+#nodejsのインストール
+RUN apt-get install -y nodejs npm
+RUN npm install n -g 
+RUN n 18.0.0
+
 # composerのインストール
 RUN cd /usr/bin && curl -s http://getcomposer.org/installer | php && ln -s /usr/bin/composer.phar /usr/bin/composer
 

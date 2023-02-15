@@ -23,6 +23,13 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 // import Pusher from 'pusher-js';
 // window.Pusher = Pusher;
 
+import { createApp } from "vue";
+
+const app = createApp();
+
+console.log(app.version);
+
+app.mount("#app");
 // window.Echo = new Echo({
 //     broadcaster: 'pusher',
 //     key: import.meta.env.VITE_PUSHER_APP_KEY,

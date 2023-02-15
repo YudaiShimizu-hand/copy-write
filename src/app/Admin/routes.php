@@ -13,5 +13,5 @@ Route::group([
 
     $router->get('/', 'HomeController@index')->name('home');
     $router->resource('/users', UserController::class); // 追加
-
+    $router->resource('/productions', ProductionController::class); // 追加
 });

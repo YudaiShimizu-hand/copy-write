@@ -4,7 +4,7 @@ namespace App\Services;
 
 use App\Repositories\ProductionRepository;
 
-class productionService
+class ProductionService
 {
 
     private $productionRepo;

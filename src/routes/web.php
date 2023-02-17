@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\ProductionController;
+use App\Http\Controllers\CartProductionController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -37,6 +38,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/production', [ProductionController::class, 'index'])->name('production.index');
+    Route::get('/production', [CartProductionController::class, 'create'])->name('cartProduction.create');
 });
 
 require __DIR__.'/auth.php';

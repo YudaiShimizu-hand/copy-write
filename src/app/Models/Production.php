@@ -16,8 +16,13 @@ class Production extends Model
         'img',
     ];
 
-    public function cartProductions()
+    // public function cartProductions()
+    // {
+    //     return $this->hasMany(CartProduction::class);
+    // }
+
+    public function carts()
     {
-        return $this->hasMany(CartProduction::class);
+        return $this->belongsToMany(Cart::class, 'cart_productions');
     }
 }

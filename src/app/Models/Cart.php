@@ -18,8 +18,13 @@ class Cart extends Model
         return $this->belongsTo(User::class, 'foreign_key');
     }
 
-    public function cartProductions()
+    // public function cartProductions()
+    // {
+    //     return $this->hasMany(CartProduction::class);
+    // }
+
+    public function productions()
     {
-        return $this->hasMany(CartProduction::class);
+        return $this->belongsToMany(Production::class, 'cart_productions');
     }
 }

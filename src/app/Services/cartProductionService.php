@@ -18,7 +18,7 @@ class CartProductionService
     {
         $data = array();
         $data['cart_id'] = $cart;
-        $data['production_id'] = $production->id;
-        return $this->cartProductionRepo->create($data);
+        $data['production_id'] = $production;
+        $this->cartProductionRepo->create($data);
     }
 }

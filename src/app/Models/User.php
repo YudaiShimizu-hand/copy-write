@@ -44,6 +44,6 @@ class User extends Authenticatable
 
     public function cart()
     {
-        return $this->belongsTo(Cart::class, 'foreign_key');
+        return $this->hasOne(Cart::class);
     }
 }

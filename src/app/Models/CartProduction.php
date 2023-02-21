@@ -10,6 +10,11 @@ class CartProduction extends Model
     use HasFactory;
 
 
+    protected $fillable = [
+        'cart_id',
+        'production_id',
+    ];
+
     public function cart()
     {
         return $this->belongsTo(Cart::class, 'foreign_key');

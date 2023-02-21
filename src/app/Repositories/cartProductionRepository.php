@@ -12,4 +12,11 @@ class CartProductionRepository
         return CartProduction::class;
     }
 
+    public function create($data)
+    {
+        $newCart = new CartProduction;
+        $newCart->create($data);
+    }
+
+
 }

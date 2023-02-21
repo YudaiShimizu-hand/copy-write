@@ -8,12 +8,13 @@
         <th>ボタン</th>
     </tr>
     @foreach($productions as $production)
-    <form action="{{route('cartProduction.create')}}" method="POST">
+    <form method="post" action="{{route('cartProduction.create')}}">
         @csrf
         <tr>
             <td>{{$production->img}}</td>
             <td>{{$production->name}}</td>
             <td>{{$production->price}}円</td>
+            <input type="hidden" name="id" value="{{$production->id}}">
             <td><button type="submit">購入</button></td>
         </tr>
     </form>

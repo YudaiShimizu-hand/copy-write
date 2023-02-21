@@ -38,7 +38,7 @@ Route::middleware('auth')->group(function () {
 
 
     Route::get('/production', [ProductionController::class, 'index'])->name('production.index');
-    Route::get('/production', [CartProductionController::class, 'create'])->name('cartProduction.create');
+    Route::post('/cartProduction', [CartProductionController::class, 'create'])->name('cartProduction.create');
 });
 
 require __DIR__.'/auth.php';

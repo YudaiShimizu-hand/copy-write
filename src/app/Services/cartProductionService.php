@@ -21,4 +21,9 @@ class CartProductionService
         $data['production_id'] = $production;
         $this->cartProductionRepo->create($data);
     }
+
+    public function delete($cartProductionId)
+    {
+        $this->cartProductionRepo->delete($cartProductionId);
+    }
 }

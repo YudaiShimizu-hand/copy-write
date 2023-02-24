@@ -23,6 +23,6 @@ class Production extends Model
 
     public function carts()
     {
-        return $this->belongsToMany(Cart::class, 'cart_productions');
+        return $this->belongsToMany(Cart::class, 'cart_production')->withPivot('id');
     }
 }

@@ -18,5 +18,10 @@ class CartProductionRepository
         $newCart->create($data);
     }
 
+    public function delete($cartProductionId)
+    {
+        $destroyData = CartProduction::find($cartProductionId);
+        $destroyData->delete();
+    }
 
 }

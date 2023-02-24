@@ -24,8 +24,8 @@ class CartProductionController extends Controller
     {
         $user = Auth::user();
         if(isset($user->cart)){
-            $authUserId = Auth::user()->id;
-            $this->cartService->create($authUserId);
+            // $authUserId = Auth::user()->id;
+            // $this->cartService->create($authUserId);
 
             $cart = $user->id;
             $production = $request->id;

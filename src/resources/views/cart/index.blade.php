@@ -7,20 +7,27 @@
             <th>個数</th>
             <th>ボタン</th>
         </tr>
-        @foreach($carts as $cart)
-            @foreach($cart->productions as $production)
+        {{-- @foreach($userCarts as $cart) --}}
+            @foreach($userCarts->productions as $production)
             <tr>
                 <td>{{$production->img}}</td>
                 <td>{{$production->name}}</td>
                 <td>{{$production->price}}円</td>
                 <td>個</td>
-                <td><button>削除</button></td>
+                <td>
+                    <form action="{{route('cartProduction.destroy', ['cartProductionId' => $production->pivot->id])}}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <input type="submit" class="btn btn-danger btn-dell" value="削除">
+                    </form>
+                    {{-- <a href="{{route('cartProduction.destroy', ['id' => $production->pivot->id])}}">削除</a> --}}
+                </td>
             </tr>
             <?php
             $total[] = $production->price;
             ?>
             @endforeach
-        @endforeach
+        {{-- @endforeach --}}
         <h1>
             合計金額:{{ array_sum($total)}}円
         </h1>

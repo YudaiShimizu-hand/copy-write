@@ -11,7 +11,8 @@ class CartController extends Controller
     {
         $user = Auth::user();
         $userCarts  = $user->cart;
-        $carts = $userCarts->with('productions')->get();
-        return view('cart.index')->with('carts', $carts);
+        // $carts = $userCarts->with('productions')->get();
+        return view('cart.index')->with('userCarts', $userCarts);
+        // ->with('carts', $carts);
     }
 }

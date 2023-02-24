@@ -15,13 +15,13 @@ class CartProduction extends Model
         'production_id',
     ];
 
-    public function cart()
-    {
-        return $this->belongsTo(Cart::class, 'foreign_key');
-    }
+    // public function cart()
+    // {
+    //     return $this->belongsTo(Cart::class, 'foreign_key');
+    // }
 
-    public function production()
-    {
-        return $this->belongsTo(Production::class, 'foreign_key');
-    }
+    // public function production()
+    // {
+    //     return $this->belongsTo(Production::class, 'foreign_key');
+    // }
 }

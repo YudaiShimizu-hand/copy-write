@@ -40,6 +40,7 @@ Route::middleware('auth')->group(function () {
 
     Route::get('/production', [ProductionController::class, 'index'])->name('production.index');
     Route::post('/cartProduction', [CartProductionController::class, 'create'])->name('cartProduction.create');
+    Route::delete('/cartProduction/{cartProductionId}', [CartProductionController::class, 'destroy'])->name('cartProduction.destroy');
     Route::get('/cart', [CartController::class, 'index'])->name('cart.index');
 });
 

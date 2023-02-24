@@ -41,4 +41,10 @@ class CartProductionController extends Controller
             return redirect()->route('cart.index');
         }
     }
+
+    public function destroy($cartProductionId)
+    {
+        $this->cartProductionService->delete($cartProductionId);
+        return redirect()->route('cart.index');
+    }
 }

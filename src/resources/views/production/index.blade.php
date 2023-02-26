@@ -24,6 +24,7 @@
         </tr>
     </form>
     @endforeach
+    {{ $productions->links() }}
 </table>
 
 

@@ -13,14 +13,12 @@ class productionRepository implements productionRepositoryInterface
         return Production::class;
     }
 
-    public function allProductions($keyword, $limit=8)
+    public function allProductions($keyword)
     {
         $query = DB::table('productions');
         if(!empty($keyword)) {
             $query->where('name', 'LIKE', "%{$keyword}%");
-        }else{
-            $query->orderBy('id', 'desc');
         }
-        return $query->paginate($limit);
+        return $query->paginate(8);
     }
 }

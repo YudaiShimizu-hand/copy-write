@@ -70,7 +70,7 @@ class ProductionController extends AdminController
         $form->text('name', __('Name'));
         $form->text('price', __('detail'));
         $form->text('detail', __('detail'));
-        $form->text('img');
+        $form->image('img', __('img'));
 
         return $form;
     }

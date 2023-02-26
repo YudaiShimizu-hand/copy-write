@@ -10,7 +10,7 @@
         {{-- @foreach($userCarts as $cart) --}}
             @foreach($userCarts->productions as $production)
             <tr>
-                <td>{{$production->img}}</td>
+                <td><img src="{{asset('uploads/'. $production->img)}}" width="150" height="100"></td>
                 <td>{{$production->name}}</td>
                 <td>{{$production->price}}円</td>
                 <td>個</td>

@@ -14,8 +14,8 @@ class ProductionService
         return $this->productionRepo = $productionRepo;
     }
 
-    public function allProductions($conditions, $limit=8)
+    public function allProductions($keyword)
     {
-        return $this->productionRepo->allProductions($conditions, $limit);
+        return $this->productionRepo->allProductions($keyword);
     }
 }

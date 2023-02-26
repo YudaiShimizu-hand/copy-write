@@ -16,8 +16,8 @@ class ProductionController extends Controller
     }
 
     public function index(Request $request){
-        $conditions = $request->all();
-        $productions = $this->productionService->allProductions($conditions);
+        $keyword = $request->input('keyword');
+        $productions = $this->productionService->allProductions($keyword);
         return view('production.index')->with('productions', $productions);
     }
 }

@@ -1,3 +1,8 @@
+<form action="{{ route('production.index') }}" method="GET">
+    <input type="text" name="keyword">
+    <input type="submit" value="検索">
+</form>
+
 <table>
 <colgroup span="4"></colgroup>
     <tr>

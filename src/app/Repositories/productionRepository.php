@@ -19,6 +19,6 @@ class productionRepository implements productionRepositoryInterface
         if(!empty($keyword)) {
             $query->where('name', 'LIKE', "%{$keyword}%");
         }
-        return $query->paginate(8);
+        return $query->paginate(4);
     }
 }

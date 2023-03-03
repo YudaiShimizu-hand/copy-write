@@ -27,7 +27,7 @@ class CartProductionController extends Controller
             // $authUserId = Auth::user()->id;
             // $this->cartService->create($authUserId);
 
-            $cart = $user->id;
+            $cart = $user->cart->id;
             $production = $request->id;
             $this->cartProductionService->create($production, $cart);
             return redirect()->route('cart.index');
@@ -35,7 +35,7 @@ class CartProductionController extends Controller
             $authUserId = Auth::user()->id;
             $this->cartService->create($authUserId);
 
-            $cart = $user->id;
+            $cart = $user->cart->id;
             $production = $request->id;
             $this->cartProductionService->create($production, $cart);
             return redirect()->route('cart.index');

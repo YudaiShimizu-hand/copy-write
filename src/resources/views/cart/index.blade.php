@@ -1,4 +1,5 @@
 <x-header>
+    @if(isset($userCarts))
     <div class="row">
         <table>
             <colgroup span="4"></colgroup>
@@ -37,8 +38,11 @@
             合計金額:{{ array_sum($total)}}円
         </h1>
     </div>
+    @else
     <div class="row">
+        <p>ありません</p>
     </div>
+    @endif
 
 </x-header>
 
